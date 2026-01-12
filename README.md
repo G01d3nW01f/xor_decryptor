@@ -24,7 +24,7 @@ the decrypted output format.
 The encrypted file must contain a **Python bytes literal**, for example:
 
 ```
-b' \x00\x00\x00\x00%\x1c\r\x03\x18\x06\x1e'
+b" \x00\x00\x00'\x0e\x01\x17AS@"
 ```
 
 This format is commonly found in CTF challenges or Python-based encryption scripts.
@@ -36,13 +36,13 @@ This format is commonly found in CTF challenges or Python-based encryption scrip
 ### 1. Decrypt with a single key
 
 ```bash
-python3 decrypt.py --enc encrypted.txt --key ayham
+python3 decrypt.py --enc encrypted.txt --key pass
 ```
 
 Example output:
 
 ```
-[KEY: ayham] AyhamDeebugg
+[KEY: pass] PassWord123
 ```
 
 ---
@@ -60,7 +60,7 @@ Example output:
 ```
 [KEY: test] �\x12��
 [KEY: secret] HelloWorld
-[KEY: ayham] AyhamDeebugg
+[KEY: pass] PassWord123 
 ```
 
 The script does **not** stop automatically or try to guess which output is correct.
